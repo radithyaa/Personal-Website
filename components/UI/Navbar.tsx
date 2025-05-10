@@ -24,15 +24,21 @@ export default function Navbar() {
     },
     {
       label: "Blogs",
-      path: "/Blogs",
+      path: "/#blogs",
     },
   ];
 
   return (
-    <nav className={cn("border-b border-b-[#202024] py-6 sm:py-8 sticky top-0 z-50 bg-[#141417]")}>
-      <div className="mx-8 px-4 sm:mx-auto max-w-3xl flex justify-between items-center">
+    <nav className={cn("border-b border-b-[#202024] py-4 sm:py-6 sticky top-0 z-50 bg-[#141417]")}>
+      <div className="mx-8 md:px-4 sm:mx-auto max-w-3xl flex justify-between items-center">
         <Link href={"/"}>
-          <Image src={"/assets/logo.svg"} alt="logo" width={20} height={20} />
+          <Image
+            src={"/assets/profile.png"}
+            alt="logo"
+            width={35}
+            height={35}
+            className="saturate-[0.3] rounded-full"
+          />
         </Link>
         <ul className="hidden sm:flex gap-5">
           {Links.map((nav, idx) => {

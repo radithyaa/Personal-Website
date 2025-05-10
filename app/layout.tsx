@@ -6,13 +6,13 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://byanrkh.my.id"),
+  metadataBase: new URL("https://ahzaradithya.site"),
   title: {
-    default: "Abyan Raditya",
-    template: "%s - Abyan Raditya",
+    default: "Ahza Radithya Dwicahyo",
+    template: "%s - Ahza Radithya Dwicahyo",
   },
   description:
-    "FrontEnd Developer working on solo projects, currently based in Bekasi, Indonesia.",
+    "FullStack Developer working on solo projects, currently based in Bekasi, Indonesia.",
   keywords: [
     "ahza",
     "nextjs",
@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     "Radithyaa",
   ],
   openGraph: {
-    siteName: "byanrkh.my.id",
-    title: "Abyan Raditya",
+    siteName: "ahzaradithya.site",
+    title: "Ahza Radithya",
     description:
-      "FrontEnd Developer working on solo projects, currently based in Bekasi, Indonesia.",
+      "FullStack Developer working on solo projects, currently based in Bekasi, Indonesia.",
     images: [
       "https://media.discordapp.net/attachments/1310990889065123883/1324049418474749953/Untitled_8.png?ex=6776bc9d&is=67756b1d&hm=5dc0e70688eecc7add808c723df77e427c9ce3833933f95a85f2183aa5fa66ef&=&format=webp&quality=lossless",
     ],
@@ -33,13 +33,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abyan Raditya",
+    title: "Ahza Radithya",
     description:
-      "FrontEnd Developer working on solo projects, currently based in Bekasi, Indonesia.",
+      "FullStack Developer working on solo projects, currently based in Bekasi, Indonesia.",
     images: [
       "https://media.discordapp.net/attachments/1310990889065123883/1324049418474749953/Untitled_8.png?ex=6776bc9d&is=67756b1d&hm=5dc0e70688eecc7add808c723df77e427c9ce3833933f95a85f2183aa5fa66ef&=&format=webp&quality=lossless",
     ],
-    creator: "@byanrkh",
+    creator: "@radithyaa",
   },
 };
 
@@ -50,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${Grotesk.className} antialiased`}>
+      <body className={`${Grotesk.className} antialiased ` }>
         {children}
         <Analytics />
         <SpeedInsights />

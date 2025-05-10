@@ -8,10 +8,11 @@ export default async function Blog() {
   const generatePost = getAllPosts();
 
   return (
-    <section>
+    <section id="blogs">
       <div className="flex justify-between items-center">
         <Title emoji="">Latest Blogs</Title>
         <Link
+          
           href={"/writings"}
           className="text-xs text-zinc-500 -mt-5 hover:underline"
         >
@@ -19,11 +20,15 @@ export default async function Blog() {
         </Link>
       </div>
       <div className="grid grid-cols-1 gap-3">
-        {generatePost
-          .map((post) => {
-            return <PostCard key={post.slug} post={post} />;
-          })
-          .slice(0, 3)}
+        {generatePost.length > 0 ? (
+          generatePost
+            .map((post) => {
+              return <PostCard key={post.slug} post={post} />;
+            })
+            .slice(0, 3)
+        ) : (
+          <p className="text-center mt-10 -mb-2 text-zinc-500 text-sm underline">The author has no posts yet</p>
+        )}
       </div>
     </section>
   );
