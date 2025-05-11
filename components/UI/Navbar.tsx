@@ -29,7 +29,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={cn("border-b border-b-[#202024] py-4 sm:py-6 sticky top-0 z-50 bg-[#141417]")}>
+    <nav aria-label="Primary Navigation" className={cn("border-b border-b-[#202024] py-4 sm:py-6 sticky top-0 z-50 bg-[#141417]")}>
       <div className="mx-8 md:px-4 sm:mx-auto max-w-3xl flex justify-between items-center">
         <Link href={"/"}>
           <Image
@@ -47,7 +47,7 @@ export default function Navbar() {
                 className='text-sm capitalize hover:underline hover:underline-offset-2 hover:text-white'
                 key={idx}
               >
-                <Link href={nav.path}>{nav.label}</Link>
+                <Link aria-label={`Navigate to ${nav.label}`} href={nav.path}>{nav.label}</Link>
               </li>
             );
           })}

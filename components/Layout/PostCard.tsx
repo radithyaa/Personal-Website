@@ -25,7 +25,7 @@ export default function PostCard({ post }: { post: Post }) {
             </Link>
             <ul className="text-zinc-400 flex items-center gap-2 text-sm">
               <li>{post.readTime} min read</li>
-              <div className="bg-zinc-400 rounded-full h-[3px] w-[3px] aspect-square flex-none relative "></div>
+              <li>•</li>
               <li>{formatDate(post.date)}</li>
             </ul>
           </div>

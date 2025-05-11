@@ -23,7 +23,7 @@ export default function Projects() {
       label: "Inventory App",
       image: "Inventory App.png",
       tech: "typescript",
-      summary: "Inventory Management App for my school that handles data in real time",
+      summary: "Inventory Management App of my school using NextJS and Supabase!",
       tags: ["NextJS", "Supabase"],
       link: "https://github.com/radithyaa/Inventory-App",
     },
@@ -84,14 +84,14 @@ export default function Projects() {
         })}
         {project.length > 3 && (
           <div className="text-center mt-4 -mb-10 ">
-            {visibleProjects < project.length ? <button
+            {visibleProjects < project.length ? <button aria-label="Show more projects"
               onClick={() => setVisibleProjects(project.length)}
               className="border border-[#252529] bg-[#18181b] text-sm hover:bg-[#1f1f24] duration-200 px-5 py-2 rounded-lg text-zinc-400"
             >
               Show More
             </button> : 
             <button
-              onClick={() => setVisibleProjects(3)}
+              onClick={() => setVisibleProjects(3)} aria-label="Show less projects"
               className="border border-[#252529] bg-[#18181b] hover:bg-[#1f1f24] duration-200 px-5 py-2 text-sm rounded-lg text-zinc-400"
             >
               Show Less
