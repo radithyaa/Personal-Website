@@ -30,16 +30,13 @@ export default function PostCard({ post }: { post: Post }) {
             </ul>
           </div>
         </div>
-        <ul>
-          <ul className="sm:flex gap-1 hidden">
-            <Link
-              className="text-sm hover:underline bg-[#18181b] border border-[#252529] rounded px-1 py-0.5 text-zinc-500"
-              href={`/writings/tags/${post.tags}`}
-            >
-              # {post.tags}
-            </Link>
-          </ul>
-        </ul>
+        <Link 
+          className=" hidden max-h-7 sm:flex gap-1 sm:flex-nowrap text-sm hover:underline bg-[#18181b] border border-[#252529] rounded px-1 py-0.5 text-zinc-500"
+          href={`/writings/tags/${post.tags}`}
+          aria-label={`Tag: ${post.tags}`}
+        >
+          # {post.tags}
+        </Link>
       </div>
     </div>
   );
