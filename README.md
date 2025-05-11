@@ -1,4 +1,5 @@
-See The result of this project at (https://personal-website-livid-phi.vercel.app/)
+See The result of this project at https://personal-website-livid-phi.vercel.app/
+
 ## Getting Started
 
 First, run the development server:
@@ -13,6 +14,6 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then, access the application at http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+(Don't be afraid to reach out!)
