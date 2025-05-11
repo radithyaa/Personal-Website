@@ -5,7 +5,7 @@ import Image from 'next/image'
 function Home() {
   return (
     <section id="home" >
-        <div className="flex justify-between flex-col-reverse md:flex-row">
+        <div className="flex justify-between flex-col-reverse md:flex-row items-center sm:items-start">
           <div className="mt-8 sm:mt-0 space-y-5 sm:w-2/3">
             <div>
               <h1 className="text-2xl font-bold text-white">
@@ -20,8 +20,8 @@ function Home() {
               I focus on writing clean, efficient, and maintainable code across both the frontend and backend.
             </p>
           </div>
-          <div className="relative">
-            <div className="relative">
+          <div className="relative flex ">
+            <div className="relative mb-4 md:mb-0 -mt-4 md:-mt-0">
               <Image
                 src={"/assets/profile.png"}
                 alt="profile pic"

@@ -17,13 +17,13 @@ export default function Projects() {
       summary:
         "a digital space that showcases a person's best work, blog, backgrounds, etc.",
       tags: ["NextJS"],
-      link: "https://github.com/byanrkh/site",
+      link: "https://github.com/radithyaa/Personal-Website",
     },
     {
       label: "Inventory App",
       image: "Inventory App.png",
       tech: "typescript",
-      summary: "Inventory Management App of my school using NextJS and Supabase!",
+      summary: "Inventory Management App for my school that handles data in real time",
       tags: ["NextJS", "Supabase"],
       link: "https://github.com/radithyaa/Inventory-App",
     },

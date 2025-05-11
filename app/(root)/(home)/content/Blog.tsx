@@ -14,7 +14,7 @@ export default async function Blog() {
         <Link
           
           href={"/writings"}
-          className="text-xs text-zinc-500 -mt-5 hover:underline"
+          className="text-xs text-zinc-500 -mt-5 hover:underline "
         >
           view more
         </Link>
