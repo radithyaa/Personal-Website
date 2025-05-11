@@ -1,4 +1,4 @@
-View the project live at https://ahzaradithyadwicahyo.site
+View the project live at https://ahzaradithya.site
 
 ## Get Started
 
