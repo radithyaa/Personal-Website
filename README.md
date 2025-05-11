@@ -1,8 +1,8 @@
-See The result of this project at https://personal-website-livid-phi.vercel.app/
+View the project live at https://personal-website-livid-phi.vercel.app/.
 
-## Getting Started
+## Get Started
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
@@ -14,6 +14,4 @@ pnpm dev
 bun dev
 ```
 
-Then, access the application at http://localhost:3000 in your browser.
-
-(Don't be afraid to reach out!)
+Then, open http://localhost:3000 in your browser. Questions? Feel free to ask!
