@@ -30,7 +30,7 @@ export default async function page({ params }: Props) {
         })}
       </div>
       <p className="mt-16 text-zinc-500 text-sm font-mono text-center">
-        ~ Its the End of My Blog
+        ~ Its the End of {tags} Blog
       </p>
     </section>
   );

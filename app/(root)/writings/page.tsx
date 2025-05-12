@@ -13,6 +13,9 @@ export default async function page() {
           return <PostCard key={post.slug} post={post} />;
         })}
       </div>
+      <p className="mt-10 text-zinc-500 text-sm font-mono text-center">
+        ~ Its the End of My Blog
+      </p>
     </section>
   );
 }

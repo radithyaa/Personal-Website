@@ -23,8 +23,7 @@ export default function Projects() {
       label: "Inventory App",
       image: "Inventory App.png",
       tech: "typescript",
-      summary: "Inventory Management App of my school using NextJS and Supabase!",
-      tags: ["NextJS", "Supabase"],
+      summary: "Inventory Management App of my school for handling data in real time.",      tags: ["NextJS", "Supabase"],
       link: "https://github.com/radithyaa/Inventory-App",
     },
   ];
