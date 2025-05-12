@@ -1,4 +1,4 @@
-View the project live at https://personal-website-livid-phi.vercel.app/.
+View the project live at https://ahzaradithya.site
 
 ## Get Started
 
