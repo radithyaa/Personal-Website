@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-t-[#202024] py-8">
-      <div className="px-4 sm:mx-auto max-w-3xl sm:flex justify-between items-center">
+      <div className="px-4 sm:mx-auto max-w-3xl flex flex-col sm:flex-row justify-center sm:justify-between items-center">
         <p className="text-sm">
           © {new Date().getFullYear()} Ahza Radithya, All right reserved.
         </p>

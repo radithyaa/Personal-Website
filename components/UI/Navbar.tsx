@@ -1,13 +1,11 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/libs/cn";
 import { Drawer } from "vaul";
 
 export default function Navbar() {
-  const pathname = usePathname();
 
   const Links = [
     {
@@ -74,8 +72,7 @@ export default function Navbar() {
                             key={idx}
                             href={nav.path}
                             className={cn(
-                              "border border-[#202024] rounded-lg py-3 text-center capitalize",
-                              pathname == nav.path ? "bg-[#202024]" : ""
+                              "border border-[#202024] rounded-lg py-3 text-center capitalize hover:bg-[#202024] "
                             )}
                           >
                             {nav.label}

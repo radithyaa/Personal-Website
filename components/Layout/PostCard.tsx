@@ -6,7 +6,7 @@ export default function PostCard({ post }: { post: Post }) {
   return (
     <div
       key={post.slug}
-      className="border border-[#252529] bg-[#141417] p-5 rounded-xl"
+      className="border overflow-hidden border-[#252529] bg-[#141417] p-5 rounded-xl"
     >
       <div className="flex justify-between">
         <div className="flex gap-3">
@@ -14,15 +14,17 @@ export default function PostCard({ post }: { post: Post }) {
             {post.emoji}
           </div>
           <div className="mt-1">
+            <div className="flex-row w-full justify-between content-between flex">
             <Link
               href={`/writings/${post.slug}`}
               className="text-lg font-black flex gap-2"
             >
               {post.title}
-              <div className="block sm:hidden text-sm bg-[#18181b] border border-[#252529] rounded px-1 py-0.5 text-zinc-500">
-                # {post.tags}
+            </Link>{/* 
+              <span className="text-nowrap hover:underline flex-nowrap max-h-6 sm:hidden text-sm bg-[#18181b] border border-[#252529] rounded px-1 py-0.5 text-zinc-500">
+                <a href={`/writings/tags/${post.tags}`}># {post.tags}</a>
+              </span> */}
               </div>
-            </Link>
             <ul className="text-zinc-400 flex items-center gap-2 text-sm">
               <li>{post.readTime} min read</li>
               <li>•</li>
@@ -30,8 +32,8 @@ export default function PostCard({ post }: { post: Post }) {
             </ul>
           </div>
         </div>
-        <Link 
-          className=" hidden max-h-7 sm:flex gap-1 sm:flex-nowrap text-sm hover:underline bg-[#18181b] border border-[#252529] rounded px-1 py-0.5 text-zinc-500"
+        <Link
+          className="text-nowrap max-h-7 sm:flex gap-1 sm:flex-nowrap text-sm hover:underline bg-[#18181b] border border-[#252529] rounded px-1 py-0.5 text-zinc-500"
           href={`/writings/tags/${post.tags}`}
           aria-label={`Tag: ${post.tags}`}
         >
