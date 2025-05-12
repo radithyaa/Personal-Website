@@ -17,30 +17,22 @@ export const metadata: Metadata = {
     "ahza",
     "nextjs",
     "Ahza Radithya Dwicahyo",
+    "Ahza Radithya Dwicahyo Portofolio",
+    "Portofolio Ahza Radithya Dwicahyo",
     "Ahza Radithya",
     "Radithyaa",
   ],
   openGraph: {
     siteName: "ahzaradithya.site",
-    title: "Ahza Radithya",
+    title: "Ahza Radithya ",
     description:
-      "FullStack Developer working on solo projects, currently based in Bekasi, Indonesia.",
+      "Hello, I'm a FullStack developer who loves making and exploring something new.",
     images: [
-      "https://media.discordapp.net/attachments/1310990889065123883/1324049418474749953/Untitled_8.png?ex=6776bc9d&is=67756b1d&hm=5dc0e70688eecc7add808c723df77e427c9ce3833933f95a85f2183aa5fa66ef&=&format=webp&quality=lossless",
+      "https://ahzaradithya.site/assets/project/personal-website.png",
     ],
     locale: "en-ID",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Ahza Radithya",
-    description:
-      "FullStack Developer working on solo projects, currently based in Bekasi, Indonesia.",
-    images: [
-      "https://media.discordapp.net/attachments/1310990889065123883/1324049418474749953/Untitled_8.png?ex=6776bc9d&is=67756b1d&hm=5dc0e70688eecc7add808c723df77e427c9ce3833933f95a85f2183aa5fa66ef&=&format=webp&quality=lossless",
-    ],
-    creator: "@radithyaa",
-  },
+  }
 };
 
 export default function RootLayout({
