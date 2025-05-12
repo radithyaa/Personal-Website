@@ -29,6 +29,9 @@ export default async function page({ params }: Props) {
           return <PostCard key={post.slug} post={post} />;
         })}
       </div>
+      <p className="mt-16 text-zinc-500 text-sm font-mono text-center">
+        ~ Its the End of My Blog
+      </p>
     </section>
   );
 }
