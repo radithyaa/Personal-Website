@@ -15,7 +15,7 @@ export default function Projects() {
       image: "personal-website.png",
       tech: "typescript",
       summary:
-        "a digital space that showcases a person's best work, blog, backgrounds, etc.",
+        "A digital space that showcases a person's best work, blog, backgrounds, etc.",
       tags: ["NextJS"],
       link: "https://github.com/radithyaa/Personal-Website",
     },
@@ -25,6 +25,14 @@ export default function Projects() {
       tech: "typescript",
       summary: "Inventory Management App of my school for handling data in real time.",      tags: ["NextJS", "Supabase"],
       link: "https://github.com/radithyaa/Inventory-App",
+    },
+    {
+      label: "Esemka Laundry",
+      image: "Esemka Laundry.png",
+      tech: "typescript",
+      summary: "A multi platform monorepo app that contains frontend, backend, and multiplatform apps in single codebase",
+      tags: ["ReactJS", "HonoJS", "Tauri"],
+      link: "https://github.com/radithyaa/tauri-monorepo-app"
     },
   ];
 
