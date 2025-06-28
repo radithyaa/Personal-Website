@@ -1,8 +1,17 @@
 import Link from "next/link";
 import type { Post } from "@/types";
 import { formatDate } from "@/libs/Blog/formatDate";
+import { type Locale } from "@/libs/i18n";
 
-export default function PostCard({ post }: { post: Post }) {
+interface PostCardProps {
+  post: Post;
+  locale: Locale;
+  translations: any;
+}
+
+export default function PostCard({ post, locale, translations }: PostCardProps) {
+  const t = translations;
+
   return (
     <div
       key={post.slug}
@@ -16,17 +25,14 @@ export default function PostCard({ post }: { post: Post }) {
           <div className="mt-1">
             <div className="flex-row w-full justify-between content-between flex">
             <Link
-              href={`/writings/${post.slug}`}
+              href={`/${locale}/writings/${post.slug}`}
               className="text-lg font-black flex gap-2"
             >
               {post.title}
-            </Link>{/* 
-              <span className="text-nowrap hover:underline flex-nowrap max-h-6 sm:hidden text-sm bg-[#18181b] border border-[#252529] rounded px-1 py-0.5 text-zinc-500">
-                <a href={`/writings/tags/${post.tags}`}># {post.tags}</a>
-              </span> */}
+            </Link>
               </div>
             <ul className="text-zinc-400 flex items-center gap-2 text-sm">
-              <li>{post.readTime} min read</li>
+              <li>{post.readTime} {t.blog.minRead}</li>
               <li>•</li>
               <li>{formatDate(post.date)}</li>
             </ul>
@@ -34,7 +40,7 @@ export default function PostCard({ post }: { post: Post }) {
         </div>
         <Link
           className="text-nowrap max-h-7 sm:flex gap-1 sm:flex-nowrap text-sm hover:underline bg-[#18181b] border border-[#252529] rounded px-1 py-0.5 text-zinc-500"
-          href={`/writings/tags/${post.tags}`}
+          href={`/${locale}/writings/tags/${post.tags}`}
           aria-label={`Tag: ${post.tags}`}
         >
           # {post.tags}
