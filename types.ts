@@ -34,11 +34,11 @@ export type Translations = {
     showMore: string;
     showLess: string;
     preview: string;
-    items: Array<{
+    items: readonly {
       label: string;
       summary: string;
-      tags: string[];
-    }>;
+      tags: readonly string[];
+    }[];
   };
   blog: {
     title: string;
