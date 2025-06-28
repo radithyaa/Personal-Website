@@ -12,7 +12,7 @@ import React from "react";
 import { getTranslations, type Locale } from "@/libs/i18n";
 
 type Props = {
-  params: Promise<{ slug: string; locale: string }>;
+  params: { slug: string; locale: string }
 };
 
 export function generateStaticParams() {
@@ -28,14 +28,19 @@ export function generateStaticParams() {
 }
 
 export default async function BlogPost({ params }: Props) {
-  const { slug, locale } = await params;
+  const { slug, locale } = params;
   
   if (!params || !slug) {
     notFound();
   }
   
   const post = getPostBySlug(slug);
-  const t = getTranslations(locale as Locale);
+  if (!post) {
+    notFound();
+  }
+
+  const t = getTranslations(locale as Locale) ?? getTranslations('en');
+
 
   return (
     <section>
@@ -71,7 +76,7 @@ export default async function BlogPost({ params }: Props) {
       </header>
       <article className="prose lg:prose-base prose-invert">
         <MDXRemote
-          source={(await post).content}
+          source={(post).content}
           options={mdxOptions}
           components={components}
         />
