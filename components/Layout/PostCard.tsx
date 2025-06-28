@@ -1,17 +1,19 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import Link from "next/link";
-import type { Post } from "@/types";
+import type { Post, Translations } from "@/types";
 import { formatDate } from "@/libs/Blog/formatDate";
 import { type Locale } from "@/libs/i18n";
 
 interface PostCardProps {
   post: Post;
   locale: Locale;
-  translations: any;
+  translations: Translations;
 }
 
-export default function PostCard({ post, locale, translations }: PostCardProps) {
+export default function PostCard({
+  post,
+  locale,
+  translations,
+}: PostCardProps) {
   const t = translations;
 
   return (
@@ -26,15 +28,17 @@ export default function PostCard({ post, locale, translations }: PostCardProps) 
           </div>
           <div className="mt-1">
             <div className="flex-row w-full justify-between content-between flex">
-            <Link
-              href={`/${locale}/writings/${post.slug}`}
-              className="text-lg font-black flex gap-2"
-            >
-              {post.title}
-            </Link>
-              </div>
+              <Link
+                href={`/${locale}/writings/${post.slug}`}
+                className="text-lg font-black flex gap-2"
+              >
+                {post.title}
+              </Link>
+            </div>
             <ul className="text-zinc-400 flex items-center gap-2 text-sm">
-              <li>{post.readTime} {t.blog.minRead}</li>
+              <li>
+                {post.readTime} {t.blog.minRead}
+              </li>
               <li>•</li>
               <li>{formatDate(post.date)}</li>
             </ul>

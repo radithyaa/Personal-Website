@@ -1,14 +1,13 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 "use client";
 
 import { Locale } from "@/libs/i18n";
 import Link from "next/link";
 import { Edit3, GitHub, Linkedin, Mail } from "react-feather";
+import { type Translations } from "@/types";
 
 interface FooterProps {
   locale: Locale;
-  translations: any;
+  translations: Translations;
 }
 
 export default function Footer({ translations }: FooterProps) {
@@ -21,34 +20,36 @@ export default function Footer({ translations }: FooterProps) {
           © {new Date().getFullYear()} Ahza Radithya, {t.footer.copyright}
         </p>
         <div className="flex gap-4 mt-4 sm:mt-0">
-        <Link
-          href={"https://www.linkedin.com/in/ahza-radithya-dwicahyo-23a761353/"}
-          target="_blank"
-          aria-label="LinkedIn Profile"
-        >
-          <Linkedin size={13} />
-        </Link>
-        <Link
-          href={"https://github.com/radithyaa"}
-          target="_blank"
-          aria-label="GitHub Profile"
-        >
-          <GitHub size={13} />
-        </Link>
-        <Link
-          href={"mailto:ahzathenation@gmail.com"}
-          target="_blank"
-          aria-label="Send Email"
-        >
-          <Mail size={13} />
-        </Link>
-        <Link
-          href={"https://medium.com/@ahzathenation"}
-          target="_blank"
-          aria-label="Medium Blog"
-        >
-          <Edit3 size={13} />
-        </Link>
+          <Link
+            href={
+              "https://www.linkedin.com/in/ahza-radithya-dwicahyo-23a761353/"
+            }
+            target="_blank"
+            aria-label="LinkedIn Profile"
+          >
+            <Linkedin size={13} />
+          </Link>
+          <Link
+            href={"https://github.com/radithyaa"}
+            target="_blank"
+            aria-label="GitHub Profile"
+          >
+            <GitHub size={13} />
+          </Link>
+          <Link
+            href={"mailto:ahzathenation@gmail.com"}
+            target="_blank"
+            aria-label="Send Email"
+          >
+            <Mail size={13} />
+          </Link>
+          <Link
+            href={"https://medium.com/@ahzathenation"}
+            target="_blank"
+            aria-label="Medium Blog"
+          >
+            <Edit3 size={13} />
+          </Link>
         </div>
       </div>
     </footer>

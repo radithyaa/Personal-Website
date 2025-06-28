@@ -1,31 +1,23 @@
 import Title from "@/components/Layout/Title";
+import { getTranslations, defaultLocale } from "@/libs/i18n";
 import React from "react";
 
 export default function About() {
+  const t = getTranslations(defaultLocale);
+
   return (
     <section id="about" style={{ scrollMarginTop: "20vh" }}>
-      <Title emoji="">About</Title>
+      <Title emoji="">{t.about.title}</Title>
       <div className="space-y-8">
-      <p>
-        Ahza was born in <u>Bekasi, Indonesia</u>. a 17 years old web developer
-        🧑‍💻. Being exposed to the creative arts and sciences at an early age,
-        this has always guided him on the path to learn something new and be
-        curious of how things work,{" "}
-        <span className="underline">
-        a Full Stack developer who loves to create new things
-        </span>
-      </p>
-      <p>
-        Here are some of the technologies I have worked with:
-      </p>
-      <ul className="list-disc gap-y-6 ml-8 flex flex-wrap">
-        <li className="w-1/2 md:w-1/3">React</li>
-        <li className="w-1/2 md:w-1/3">Next.js</li>
-        <li className="w-1/2 md:w-1/3">React Native</li>
-        <li className="w-1/2 md:w-1/3">Express</li>
-        <li className="w-1/2 md:w-1/3">MongoDB</li>
-        <li className="w-1/2 md:w-1/3">PostgreSql</li>
-      </ul>
+        <p>{t.about.bio1}</p>
+        <p>{t.about.bio2}</p>
+        <ul className="list-disc gap-y-6 ml-8 flex flex-wrap">
+          {t.about.technologies.map((tech: string, index: number) => (
+            <li key={index} className="w-1/2 md:w-1/3">
+              {tech}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
