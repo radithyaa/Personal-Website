@@ -1,15 +1,14 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import PostCard from "@/components/Layout/PostCard";
 import Title from "@/components/Layout/Title";
 import { getAllPosts } from "@/libs/Blog/post";
 import Link from "next/link";
 import React from "react";
 import { type Locale } from "@/libs/i18n";
+import { type Translations } from "@/types";
 
 interface BlogProps {
   locale: Locale;
-  translations: any;
+  translations: Translations;
 }
 
 export default async function Blog({ locale, translations }: BlogProps) {
@@ -31,11 +30,20 @@ export default async function Blog({ locale, translations }: BlogProps) {
         {generatePost.length > 0 ? (
           generatePost
             .map((post) => {
-              return <PostCard key={post.slug} post={post} locale={locale} translations={t} />;
+              return (
+                <PostCard
+                  key={post.slug}
+                  post={post}
+                  locale={locale}
+                  translations={t}
+                />
+              );
             })
             .slice(0, 3)
         ) : (
-          <p className="text-center mt-10 -mb-2 text-zinc-500 text-sm underline">{t.blog.noPosts}</p>
+          <p className="text-center mt-10 -mb-2 text-zinc-500 text-sm underline">
+            {t.blog.noPosts}
+          </p>
         )}
       </div>
     </section>
