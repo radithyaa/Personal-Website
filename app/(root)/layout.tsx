@@ -9,7 +9,7 @@ export default function layout({ children }: { children?: ReactNode }) {
     <>
       <Navbar locale={locales[0]} translations={translations}/>
       <main className="px-4 sm:mx-auto min-h-[57.5vh] max-w-3xl my-20">{children}</main>
-      <Footer translations={translations} />
+      <Footer translations={translations} locale={locales[0]}/>
     </>
   );
 }
