@@ -29,7 +29,7 @@ export default function LanguageSwitcher({ currentLocale }: { currentLocale: str
       {/* Desktop Version */}
       <div className="hidden sm:block relative group">
         <button 
-          className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#202024] hover:bg-[#1A1A19] transition-colors text-sm"
+          className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#1e1e21] hover:bg-[#202024] transition-colors text-sm"
           aria-label="Change language"
         >
           <Globe size={14} />
