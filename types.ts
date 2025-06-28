@@ -27,7 +27,7 @@ export type Translations = {
     title: string;
     bio1: string;
     bio2: string;
-    technologies: string[];
+    technologies: readonly string[];
   };
   projects: {
     title: string;
