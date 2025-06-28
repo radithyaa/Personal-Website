@@ -9,6 +9,6 @@ export function isValidLocale(locale: string): locale is Locale {
 }
 
 export const locales = Object.keys(translations) as Locale[]
-export const defaultLocale: Locale = 'id'
+export const defaultLocale: Locale = 'en'
 
 export type { Locale }
