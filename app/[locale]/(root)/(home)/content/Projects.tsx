@@ -77,7 +77,7 @@ export default function Projects({ translations }: ProjectsProps) {
                 <hr className="border-1 border-[#252529] border-dashed my-3" />
                 <div className="flex items-center gap-5">
                   <ul className="flex gap-2">
-                    {p.tags.map((tag: "string") => {
+                    {p.tags.map((tag: string) => {
                       return (
                         <li
                           key={tag}
