@@ -11,8 +11,9 @@ import { notFound } from "next/navigation";
 import React from "react";
 import { getTranslations, type Locale } from "@/libs/i18n";
 
+
 type Props = {
-  params: { slug: string; locale: string }
+  params: { slug: string; locale: string };
 };
 
 export function generateStaticParams() {
@@ -28,7 +29,7 @@ export function generateStaticParams() {
 }
 
 export default async function BlogPost({ params }: Props) {
-  const { slug, locale } = params;
+  const { slug, locale } = await params;
   
   if (!params || !slug) {
     notFound();
