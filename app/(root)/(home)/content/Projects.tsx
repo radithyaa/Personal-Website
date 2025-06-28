@@ -40,7 +40,7 @@ export default function Projects() {
 
   return (
     <section id="projects" style={{ scrollMarginTop: "20vh" }}>
-      <Title emoji="">Projects</Title>
+      <Title emoji="">{t.projects.title}</Title>
       <div className="grid gap-2">
         {project.slice(0, visibleProjects).map((p, idx) => {
           return (
