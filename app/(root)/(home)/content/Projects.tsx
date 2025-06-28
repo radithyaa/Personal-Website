@@ -99,7 +99,7 @@ export default function Projects() {
                 onClick={() => setVisibleProjects(project.length)}
                 className="border border-[#252529] bg-[#18181b] text-sm hover:bg-[#1f1f24] duration-200 px-5 py-2 rounded-lg text-zinc-400"
               >
-                Show More
+                {t.projects.showMore}
               </button>
             ) : (
               <button
@@ -107,7 +107,7 @@ export default function Projects() {
                 aria-label="Show less projects"
                 className="border border-[#252529] bg-[#18181b] hover:bg-[#1f1f24] duration-200 px-5 py-2 text-sm rounded-lg text-zinc-400"
               >
-                Show Less
+                {t.projects.showLess}
               </button>
             )}
           </div>
