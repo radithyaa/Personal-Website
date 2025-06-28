@@ -65,7 +65,7 @@ export default function Projects() {
                     href={p.link}
                     className="border border-[#252529] bg-[#18181b] hover:bg-[#1f1f24] duration-200 px-5 py-2 flex items-center rounded-lg text-zinc-400 gap-2"
                   >
-                    <Link2 size={15} /> Preview
+                    <Link2 size={15} /> {t.projects.preview}
                   </Link>
                 </div>
                 <hr className="border-1 border-[#252529] border-dashed my-3" />
