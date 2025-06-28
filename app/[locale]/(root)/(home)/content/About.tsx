@@ -1,12 +1,11 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import Title from "@/components/Layout/Title";
 import { Locale } from "@/libs/i18n";
+import { type Translations } from "@/types";
 import React from "react";
 
 interface AboutProps {
   locale: Locale;
-  translations: any;
+  translations: Translations;
 }
 
 export default function About({ translations }: AboutProps) {
@@ -16,17 +15,15 @@ export default function About({ translations }: AboutProps) {
     <section id="about" style={{ scrollMarginTop: "20vh" }}>
       <Title emoji="">{t.about.title}</Title>
       <div className="space-y-8">
-      <p>
-        {t.about.bio1}
-      </p>
-      <p>
-        {t.about.bio2}
-      </p>
-      <ul className="list-disc gap-y-6 ml-8 flex flex-wrap">
-        {t.about.technologies.map((tech: string, index: number) => (
-          <li key={index} className="w-1/2 md:w-1/3">{tech}</li>
-        ))}
-      </ul>
+        <p>{t.about.bio1}</p>
+        <p>{t.about.bio2}</p>
+        <ul className="list-disc gap-y-6 ml-8 flex flex-wrap">
+          {t.about.technologies.map((tech: string, index: number) => (
+            <li key={index} className="w-1/2 md:w-1/3">
+              {tech}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
