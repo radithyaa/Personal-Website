@@ -13,7 +13,7 @@ import { getTranslations, type Locale } from "@/libs/i18n";
 
 
 type Props = {
-  params: { slug: string; locale: string };
+  params: Promise<{ slug: string; locale: string }>
 };
 
 export function generateStaticParams() {
