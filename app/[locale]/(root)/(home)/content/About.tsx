@@ -1,9 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import Title from "@/components/Layout/Title";
+import { Locale } from "@/libs/i18n";
 import React from "react";
 
 interface AboutProps {
+  locale: Locale;
   translations: any;
 }
 

@@ -2,10 +2,12 @@
 
 "use client";
 
+import { Locale } from "@/libs/i18n";
 import Link from "next/link";
 import { Edit3, GitHub, Linkedin, Mail } from "react-feather";
 
 interface FooterProps {
+  locale: Locale;
   translations: any;
 }
 

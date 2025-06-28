@@ -3,6 +3,9 @@ import Title from "@/components/Layout/Title";
 import { getAllPosts } from "@/libs/Blog/post";
 import { notFound } from "next/navigation";
 import React from "react";
+import { locales } from "@/libs/i18n";
+import { translations } from "@/libs/i18n/translations";
+
 
 type Props = {
   params: Promise<{ tags: string }>;
@@ -26,7 +29,7 @@ export default async function page({ params }: Props) {
       </Title>
       <div className="grid grid-cols-1 gap-3">
         {posts.map((post) => {
-          return <PostCard key={post.slug} post={post} />;
+          return <PostCard key={post.slug} post={post} locale={locales[0]} translations={translations}/>;
         })}
       </div>
       <p className="mt-16 text-zinc-500 text-sm font-mono text-center">
