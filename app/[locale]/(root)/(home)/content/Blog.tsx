@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import PostCard from "@/components/Layout/PostCard";
 import Title from "@/components/Layout/Title";
 import { getAllPosts } from "@/libs/Blog/post";

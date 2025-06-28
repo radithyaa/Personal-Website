@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 'use client'
 
 import Title from "@/components/Layout/Title";
@@ -12,7 +14,7 @@ interface ProjectsProps {
   translations: any;
 }
 
-export default function Projects({ locale, translations }: ProjectsProps) {
+export default function Projects({ translations }: ProjectsProps) {
   const [visibleProjects, setVisibleProjects] = React.useState(3);
   const t = translations;
 
@@ -76,7 +78,7 @@ export default function Projects({ locale, translations }: ProjectsProps) {
           <hr className="border-1 border-[#252529] border-dashed my-3" />
           <div className="flex items-center gap-5">
             <ul className="flex gap-2">
-              {p.tags.map((tag) => {
+              {p.tags.map((tag: "string") => {
                 return (
             <li
               key={tag}

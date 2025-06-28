@@ -1,13 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import Title from "@/components/Layout/Title";
 import React from "react";
-import { type Locale } from "@/libs/i18n";
 
 interface AboutProps {
-  locale: Locale;
   translations: any;
 }
 
-export default function About({ locale, translations }: AboutProps) {
+export default function About({ translations }: AboutProps) {
   const t = translations;
 
   return (

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import React from 'react'
 import GitHubCalendar from 'react-github-calendar'
 import Image from 'next/image'
@@ -8,7 +10,7 @@ interface HomeProps {
   translations: any;
 }
 
-function Home({ locale, translations }: HomeProps) {
+function Home({ translations }: HomeProps) {
   const t = translations;
 
   return (

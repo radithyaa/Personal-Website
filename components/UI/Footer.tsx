@@ -1,15 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 
 import Link from "next/link";
 import { Edit3, GitHub, Linkedin, Mail } from "react-feather";
-import { type Locale } from "@/libs/i18n";
 
 interface FooterProps {
-  locale: Locale;
   translations: any;
 }
 
-export default function Footer({ locale, translations }: FooterProps) {
+export default function Footer({ translations }: FooterProps) {
   const t = translations;
 
   return (

@@ -3,6 +3,8 @@ import Title from "@/components/Layout/Title";
 import { getAllPosts } from "@/libs/Blog/post";
 import Link from "next/link";
 import React from "react";
+import { locales } from "@/libs/i18n";
+import { translations } from "@/libs/i18n/translations";
 
 export default async function Blog() {
   const generatePost = getAllPosts();
@@ -23,7 +25,7 @@ export default async function Blog() {
         {generatePost.length > 0 ? (
           generatePost
             .map((post) => {
-              return <PostCard key={post.slug} post={post} />;
+              return <PostCard key={post.slug} post={post} locale={locales[0]} translations={translations}/>;
             })
             .slice(0, 3)
         ) : (

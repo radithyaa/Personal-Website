@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import Link from "next/link";
 import type { Post } from "@/types";
 import { formatDate } from "@/libs/Blog/formatDate";

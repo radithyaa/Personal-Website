@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { isValidLocale, type Locale } from "@/libs/i18n";
+import { isValidLocale } from "@/libs/i18n";
 import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
