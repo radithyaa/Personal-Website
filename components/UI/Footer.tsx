@@ -22,7 +22,7 @@ export default function Footer({ translations }: FooterProps) {
         <div className="flex gap-4 mt-4 sm:mt-0">
           <Link
             href={
-              "https://www.linkedin.com/in/ahza-radithya-dwicahyo-23a761353/"
+              "linkedin.com/in/ahza-radithya"
             }
             target="_blank"
             aria-label="LinkedIn Profile"
@@ -30,7 +30,7 @@ export default function Footer({ translations }: FooterProps) {
             <Linkedin size={13} />
           </Link>
           <Link
-            href={"https://github.com/radithyaa"}
+            href={"github.com/radithyaa"}
             target="_blank"
             aria-label="GitHub Profile"
           >
@@ -44,7 +44,7 @@ export default function Footer({ translations }: FooterProps) {
             <Mail size={13} />
           </Link>
           <Link
-            href={"https://medium.com/@ahzathenation"}
+            href={"medium.com/@ahzaradithya"}
             target="_blank"
             aria-label="Medium Blog"
           >
